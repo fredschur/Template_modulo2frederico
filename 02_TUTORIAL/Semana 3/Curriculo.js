@@ -1,0 +1,1 @@
+alert('Curriculo dos cria')
