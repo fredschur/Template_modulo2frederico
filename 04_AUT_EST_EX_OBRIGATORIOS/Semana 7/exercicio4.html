@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div>
+        <p>Quantidade de pessoas:<input type="number" name="number" id="txtnum"></p>
+        <p>Voo:
+            <select id="select">
+                <option value="diurno">Diurno</option>
+                <option value="noturno">Noturno</option>
+            </select>
+        </p>
+        <p><input type="button" value="Confirmar informação" onclick="confirmar()"></p>
+        <div id="res"></div>
+    </div>
+</section>
+<script>
+    function confirmar(){
+    var quant = document.getElementById("txtnum").value
+    var select = document.getElementById("select").value
+    var res = document.getElementById("res")
+
+    console.log(quant)
+   
+    if (select == "diurno")
+        {
+            var result = quant * 200
+            res.innerHTML += `<p>${result}</p>`
+        }
+        else if (select == "diurno" && quant>=50)
+        {
+        var result = (quant * 0.4)
+        res.innerHTML += `<p>${result}</p>`
+        }
+    else if (select == "noturno")
+        {
+        var result = (quant * 100)
+        res.innerHTML += `<p>${result}</p>`
+        }
+    else if (select == "noturno" && quant>=50)
+        {
+        var result = (quant * 0.2)
+        res.innerHTML += `<p>${result}</p>`
+        }
+    else
+        {
+            res.innerHTML = "ERRO!"
+        }
+}
+</script>
+</body>
+</html>
