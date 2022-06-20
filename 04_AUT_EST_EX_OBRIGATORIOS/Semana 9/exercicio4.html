@@ -9,13 +9,13 @@
 <body>
     <label for="lastNumber">Digite o valor de n</label>
     <input type="text" name="lastNumber" id="lastNumber">
-    <button id="btn">Calcular</button>
+    <button id="calcuar">Calcular</button>
     <br>
     <br>
-    <div id="result"></div>
+    <div id="resultado"></div>
     <script>
-        let button = document.getElementById('btn');
-    let result = document.getElementById('result');
+        let button = document.getElementById('calcular');
+    let result = document.getElementById('resultado');
 
     button.addEventListener('click', () =>{
     let n = parseInt(document.getElementById('lastNumber').value);
