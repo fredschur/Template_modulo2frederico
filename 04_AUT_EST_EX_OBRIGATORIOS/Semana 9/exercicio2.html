@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Digite aqui o número</label>
+    <input type="number" name="number" id="number" min="1">
+    <button id="calcular">Realizar cálculo</button>
+    <br>
+    <div id="resultado"></div>
+    <script>
+        let button = document.getElementById('calcular');
+        let result = document.getElementById('resultado');
+        let sum = 0;
+        
+        button.addEventListener('click', () =>{
+            let number = document.getElementById('number').value;
+            for(let i = 0; i < number.length; i++){
+                sum += parseInt(number[i]);
+            }
+        
+            result.innerHTML = `A soma ${number} é igual a ${sum}`;
+        });
+    </script>
+</body>
+</html>

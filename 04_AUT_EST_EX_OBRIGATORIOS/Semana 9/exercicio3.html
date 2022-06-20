@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name1">Digite o primeiro nome</label>
+    <input type="text" name="name1" id="name1">
+    <label for="name2">Digite o segundo nome</label>
+    <input type="text" name="name2" id="name2">
+    <label for="name3">Digite o terceiro nome</label>
+    <input type="text" name="name3" id="name3">
+    <button id="order">Ordenar nomes</button>
+    <br>
+    <div id="result"></div>
+    <script>
+        let button = document.getElementById('order');
+    let result = document.getElementById('result');
+    let array = [];
+
+    button.addEventListener('click', () =>{
+    let name1 = document.getElementById('name1').value;
+    let name2 = document.getElementById('name2').value;
+    let name3 = document.getElementById('name3').value;
+
+    array.push(name1);
+    array.push(name2);
+    array.push(name3);
+
+    let newArray = array.sort();
+
+    result.innerHTML = `Ordem: ${newArray[0]}, ${newArray[1]}, ${newArray[2]}`;
+
+    name1 = '';
+    name2 = '';
+    name3 = '';
+});
+    </script>
+</body>
+</html>

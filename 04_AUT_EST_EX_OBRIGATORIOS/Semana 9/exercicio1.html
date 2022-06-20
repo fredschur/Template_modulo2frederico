@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<input type="number" max="999" min="100" id="numero">
+
+<button id="calcular" onclick="par_impar()">Calcular</button>
+
+<p id="par">
+    
+<p id="impar">
+
+</body>
+<script>
+
+function par_impar (){
+var numero = parseInt(document.getElementById("numero").value);
+var centena;
+
+ centena = Math. trunc ( numero / 100 )     
+
+if(centena % 2 == 0) {
+    document.getElementById("par").innerHTML = "Par:" + numero
+}
+else {
+    document.getElementById("impar").innerHTML = "Impar: " + numero
+}
+
+
+}
+</script>
+</html>
